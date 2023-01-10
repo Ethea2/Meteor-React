@@ -39,6 +39,8 @@ const MeteorPage = () => {
                 <MeteorContainer setUserSearch={setUserSearch} checkMeteor={checkMeteor}/>
                 {meteors && <MeteorList />}
                 {noMeteor && <div>No meteor found</div>}
+                {isLoading && <div>loading meteors now</div>}
+                {error && <div>Could not load meteor data</div>}
             </MeteorContext.Provider>
         </div>
     )
